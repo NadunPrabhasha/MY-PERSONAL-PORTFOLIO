@@ -1,12 +1,19 @@
+import Navbar from "./layout/Navbar"
+import Hero from "./section/Hero"
+import About from "./sections/About"
 
 
 function App() {
- 
+
 
   return (
-    <>
-     <h1>dddddd</h1>
-    </>
+    <div className="min-h-screen overflow-x-hidden">
+      <Navbar />
+      <main>
+        <Hero/>
+        <About/>
+      </main>
+    </div>
   )
 }
 
