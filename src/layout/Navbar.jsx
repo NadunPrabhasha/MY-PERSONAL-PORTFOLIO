@@ -8,15 +8,18 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <header>
-      <nav>
-        <a>
-          PM<span>.</span>
+    <header className="fixed top-0 left-0 right-0 bg-transparent py-5 ">
+      <nav className="container mx-auto px-6 flex items-center justify-between">
+        <a
+          href="#"
+          className="text-xl font-bold tracking-tight hover:text-primary"
+        >
+          PM<span className="text-primary">.</span>
         </a>
 
         {/* Dexktop Nav*/}
-        <div>
-          <div>
+        <div className="flex items-center gap-1">
+          <div className="glass">
             {navLinks.map((link, index) => (
               <a href={link.href} key={index}>{link.label}</a>
             ))}

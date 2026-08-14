@@ -23,18 +23,26 @@
 
 }
 
-@layer base{
-  html{
+@layer base {
+  html {
     scroll-behavior: smooth;
   }
 
-  body{
+  body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: "Inter",sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
-  .font-serif{
-    font-family: "Playfair Display",serif;
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer components {
+  .glass {
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparents);
+    backdrop-filter: blur(16);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
 }
