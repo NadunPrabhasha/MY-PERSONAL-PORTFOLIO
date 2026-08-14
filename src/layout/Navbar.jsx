@@ -1,7 +1,28 @@
+const navLinks = [
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
+  { href: "#testimonials", label: "Textimonials" },
 
+]
 
 export default function Navbar() {
   return (
-    <div>Navbar</div>
+    <header>
+      <nav>
+        <a>
+          PM<span>.</span>
+        </a>
+
+        {/* Dexktop Nav*/}
+        <div>
+          <div>
+            {navLinks.map((link, index) => (
+              <a href={link.href} key={index}>{link.label}</a>
+            ))}
+          </div>
+        </div>
+      </nav>
+    </header>
   )
 }
