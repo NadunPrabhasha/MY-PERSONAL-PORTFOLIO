@@ -1,7 +1,7 @@
 
 
 function Button({ className, size, children }) {
-    const baseClasses = "relative overflow-hidden rounded-full font-medium";
+    const baseClasses = "relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25 ";
 
     const classes = baseClasses;
     return (
@@ -9,7 +9,7 @@ function Button({ className, size, children }) {
             <span className="relative flex items-center justify-center gap-2">
                 {children}
             </span>
-        </button> 
+        </button>
     )
 }
 
