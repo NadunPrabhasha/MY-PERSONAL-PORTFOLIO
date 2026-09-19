@@ -1,5 +1,7 @@
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import AnimatedBorderButton from "../components/AnimatedBorderButton";
+
 
 const projects = [
   {
@@ -40,7 +42,7 @@ const projects = [
   },
 ];
 
-export const Projects = () => {
+function Projects() {
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
       {/* Bg glows */}
@@ -82,7 +84,7 @@ export const Projects = () => {
                 />
                 <div
                   className="absolute inset-0 
-                bg-gradient-to-t from-card via-card/50
+                bg-linear-to-t from-card via-card/50
                  to-transparent opacity-60"
                 />
                 {/* Overlay Links */}
@@ -97,7 +99,7 @@ export const Projects = () => {
                     href={project.github}
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
-                    <Github className="w-5 h-5" />
+                    <FaGithub className="w-5 h-5" />
                   </a>
                 </div>
               </div>
@@ -142,5 +144,7 @@ export const Projects = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
+
+export default Projects
